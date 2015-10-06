@@ -25,7 +25,7 @@
 
 	<!-- Gripper -->
 	<include file="$(find cob_controller_configuration_gazebo)/launch/components/generic_controller.launch">
-		<arg name="component_name" value="gripper"/>
+		<arg name="component_name" value="sdh"/>
 		<arg name="version" value="sdh"/>
 	</include>
 
