@@ -146,11 +146,19 @@
 			<arg name="start_manager" value="false"/>
 			<arg name="nodelet_manager" value="cam3d_nodelet_manager"/>
 		</include-->
-
-		<!-- start additional packages -->
-		<include file="$(find cob_bringup)/drivers/sound.launch" />
 	</group>
 
+
+        <group>
+            <machine name="pc3" address="$(arg pc3)" env-loader="$(arg env_script)" default="true" timeout="30"/>
+
+            <include file="$(find cob_bringup)/tools/pc_monitor.launch" >
+                <arg name="robot" value="$(arg robot)" />
+                <arg name="pc" value="$(arg pc1)" />
+            </include>
+
+            <include file="$(find cob_bringup)/drivers/sound.launch" />
+        </group>
 
 	<machine name="pc1" address="$(arg pc1)" env-loader="$(arg env_script)" default="true" timeout="30"/>
 
