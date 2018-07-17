@@ -3,5 +3,5 @@ action_name: /tray/joint_trajectory_controller/follow_joint_trajectory
 service_ns: /tray/driver
 default_vel: 0.1
 
-up: [[3.1415926]]
-down: [[0.078295096755]]
+up: [[0.078295096755]]
+down: [[-3.0715926]]
